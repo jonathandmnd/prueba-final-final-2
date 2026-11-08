@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario con Calificación</title>
+    <link rel="stylesheet" href="css 1.css">
+    <script src="java 1.js" defer></script>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Mi Cuestionario</h1>
+    
+    <div class="question">
+        <p>1. ¿Qué carácter se debe escribir obligatoriamente al principio de una celda para que Excel interprete que se está introduciendo una fórmula o función?</p>
+        <input type="radio" name="q1" id="q1-a" class="correct">
+        <label for="q1-a">el signo igual</label>
+
+        <input type="radio" name="q1" id="q1-b" class="wrong">
+        <label for="q1-b">signo de interrogacion</label>
+
+        <input type="radio" name="q1" id="q1-c" class="wrong">
+        <label for="q1-c">un parentecis</label>
+    </div>
+
+    <div class="question">
+        <p>2. ¿Cuál de los siguientes símbolos utiliza Excel para realizar una multiplicación?</p>
+        <input type="radio" name="q2" id="q2-a" class="wrong">
+        <label for="q2-a">una x</label>
+
+        <input type="radio" name="q2" id="q2-b" class="wrong">
+        <label for="q2-b">se utiliza un punto (.)</label>
+
+        <input type="radio" name="q2" id="q2-c" class="correct">
+        <label for="q2-c">se utiliza un asterisco (*)</label>
+    </div>
+
+    <div class="question">
+        <p>3. Si en las celdas A1, A2 y A3 tienes los valores 10, 20 y 30 respectivamente, ¿cuál será el resultado de la fórmula =SUMA(A1:A3)?</p>
+        <input type="radio" name="q3" id="q3-a" class="wrong">
+        <label for="q3-a">70</label>
+
+        <input type="radio" name="q3" id="q3-b" class="correct">
+        <label for="q3-b">60</label>
+
+        <input type="radio" name="q3" id="q3-c" class="wrong">
+        <label for="q3-c">40</label>
+    </div>
+
+    <div class="question">
+        <p>4. ¿Qué cálculo realiza exactamente la función =PROMEDIO(B1:B4)?</p>
+        <input type="radio" name="q4" id="q4-a" class="correct">
+        <label for="q4-a">suma los valores B1:B4 y los divide entre las cantidad de celdas con numeros</label>
+
+        <input type="radio" name="q4" id="q4-b" class="wrong">
+        <label for="q4-b">multiplica los numeros de B1:B4</label>
+
+        <input type="radio" name="q4" id="q4-c" class="wrong">
+        <label for="q4-c">suma los valores B1:B4 y los divide entre las cantidad de celdas con numeros</label>
+    </div>
+
+    <div class="question">
+        <p>5. Al evaluar la función =SI(C1 > 50; "Alto"; "Bajo"), sabiendo que la celda C1 contiene el número 75, ¿qué texto mostrará la celda?</p>
+        <input type="radio" name="q5" id="q5-a" class="wrong">
+        <label for="q5-a">Bajo</label>
+
+        <input type="radio" name="q5" id="q5-b" class="correct">
+        <label for="q5-b">Alto</label>
+
+        <input type="radio" name="q5" id="q5-c" class="wrong">
+        <label for="q5-c">igual</label>
+    </div>
+
+    <button class="btn-calificar" onclick="calcularNota()">Calificar Cuestionario</button>
+    <div id="zona-resultado" class="resultado"></div>
+</div>
+</body>
+</html>

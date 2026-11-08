@@ -1,0 +1,115 @@
+ * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #5d94e7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            background-color: rgb(129, 245, 125);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .question {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        p {
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            display: block;
+            background-color: #f8f9fa;
+            border: 2px solid #e9ecef;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        label:hover {
+            background-color: #e8f0fe;
+            border-color: #98bcfe;
+        }
+
+        /* --- LÓGICA DE VISUALIZACIÓN INDIVIDUAL CON CSS --- */
+        .correct:checked + label {
+            background-color: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+
+        .wrong:checked + label {
+            background-color: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+
+        /* Bloquear preguntas ya respondidas */
+        input[type="radio"]:checked ~ label {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        input[type="radio"]:checked + label {
+            opacity: 1;
+        }
+.btn-calificar {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+            cursor: pointer;
+    margin-top: 20px;
+            transition: background 0.2s;
+        }
+
+        .btn-calificar:hover {
+            background-color: #0056b3;
+        }
+
+        .resultado {
+            display: none; /* Oculto hasta que se pulse el botón */
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e2e3e5;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #383d41;
+        }
